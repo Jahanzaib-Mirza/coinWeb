@@ -1,0 +1,18 @@
+ion-content{
+  --background: url('../../../assets/images/login.jpg') center 100%/100% no-repeat; 
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // --background-size: auto !important;
+}
+.main{
+  // background-color: aqua;
+  height: 100vh;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
+ion-item{
+  border-radius: 40px 40px 40px 40px;
+  // background-color: gray;
+  margin-top: 10px;
+}

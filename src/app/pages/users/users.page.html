@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle autoHide="false">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openAddUser()">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-card>
+    <ion-card-header *ngIf="clerks?.length!=0">
+      <ion-card-title>Clerks
+        <ion-text *ngIf="clerks" style="float: right;" class="ion-margin-right">{{clerks?.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row style="border-bottom: 1px solid grey;">
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Name</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Email</ion-text>
+          </ion-col>
+          <!-- <ion-col size="3" style="font-size: 24px;font-weight: bold;">
+            Address
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Contact</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Action</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let clerk of clerks">
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{clerk.fullName}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{clerk.email}}</ion-text>
+          </ion-col>
+          <!-- <ion-col>
+            <ion-title>{{clerk.address}}</ion-title>
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{clerk.phoneNumber}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button (click)="confirmation(clerk.id)" color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+    <ion-card-header *ngIf="managers?.length!=0" >
+      <ion-card-title>Managers
+        <ion-text style="float: right;" class="ion-margin-right">{{managers?.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="managers?.length!=0">
+      <ion-grid>
+        <ion-row *ngFor="let manager of managers">
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{manager.fullName}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{manager.email}}</ion-text>
+          </ion-col>
+          <!-- <ion-col>
+            <ion-title>{{manager.address}}</ion-title>
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{manager.phoneNumber}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button (click)="confirmation(manager.id)" color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content> 
+    <ion-card-header *ngIf="accountants?.length!=0">
+      <ion-card-title>Accountants
+        <ion-text *ngIf="accountants" style="float: right;" class="ion-margin-right">{{accountants?.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row *ngFor="let accountant of accountants">
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{accountant.fullName}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{accountant.email}}</ion-text>
+          </ion-col>
+          <!-- <ion-col>
+            <ion-title>{{accountant.address}}</ion-title>
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{accountant.phoneNumber}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button (click)="confirmation(accountant.id)" color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,18 @@
+.main-box{
+    display: flex;
+    
+}
+.right{
+    width: 17% !important;
+    height: 100vh;
+}
+.left{
+    width: 83%;
+    height: 100vh;
+
+}
+.active-link{
+    --ion-text-color: var(--ion-color-primary-shade);
+    // --ion-text-color: blue;
+    font-weight: bold;
+}

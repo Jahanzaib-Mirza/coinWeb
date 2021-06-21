@@ -1,0 +1,37 @@
+<ion-split-pane when="sm" style="--side-width:17%" contentId="main">
+  <ion-menu contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/superadmin/admin-list" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <ion-icon name="people"></ion-icon>
+            Admins
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/superadmin/companies" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <ion-icon name="briefcase"></ion-icon>
+            Companies
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <!-- <ion-menu-toggle *ngIf="pathId == /superadmin/admin-company/" autoHide="false">
+        <ion-item routerLink="/superadmin/admin-companies" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <ion-icon name="briefcase"></ion-icon>
+           Admin's Companies
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle> -->
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>

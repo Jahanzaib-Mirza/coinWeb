@@ -1,0 +1,12 @@
+.main {
+    // background-color: aqua;
+    height: 100vh;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+}
+ion-item {
+    border-radius: 40px 40px 40px 40px;
+    // background-color: gray;
+    margin-top: 15px;
+}

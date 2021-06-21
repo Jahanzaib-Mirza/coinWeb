@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle autoHide="false">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-card>
+    <ion-card-content>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-toggle autoHide="false">
+            <ion-button (click)="addCustomer()">
+              <ion-icon name="add" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-grid>
+        <ion-row style="border-bottom: 1px solid grey;">
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Name
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Email
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Address
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Contact
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Action
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-title>Abc</ion-title>
+          </ion-col>
+          <ion-col>
+            abc@gmail.com
+          </ion-col>
+          <ion-col>
+            <ion-title>Abc Road</ion-title>
+          </ion-col>
+          <ion-col>
+            <ion-title>02121289889</ion-title>
+          </ion-col>
+          <ion-col>
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-title>Abc</ion-title>
+          </ion-col>
+          <ion-col>
+            abc@gmail.com
+          </ion-col>
+          <ion-col>
+            <ion-title>Abc Road</ion-title>
+          </ion-col>
+          <ion-col>
+            <ion-title>02121289889</ion-title>
+          </ion-col>
+          <ion-col>
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

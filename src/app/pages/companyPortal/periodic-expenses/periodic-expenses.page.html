@@ -1,0 +1,57 @@
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-card>
+    <ion-card-content>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-toggle autoHide="false">
+            <ion-button (click)="addExpense()">
+              <ion-icon name="add" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-grid>
+        <ion-row style="border-bottom: 1px solid grey;">
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Name
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Currency
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Amount
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Category
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Action
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let expense of expenses">
+          <ion-col>
+            <ion-text style="font-size: 19px;">{{expense.description}}</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">{{expense.period}}</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">{{expense.amount}}</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">{{expense.category}}</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="editExpense()" color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="danger" (click)="confirmation(expense.id)">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

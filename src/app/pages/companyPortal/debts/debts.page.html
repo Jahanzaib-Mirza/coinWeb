@@ -1,0 +1,104 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle autoHide="false">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>debts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-toggle autoHide="false">
+            <ion-button (click)="addDebt()">
+              <ion-icon name="add" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-grid>
+        <ion-row style="border-bottom: 1px solid grey;">
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Name
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Description
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Date
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Due Date
+          </ion-col>
+          <ion-col style="font-size: 24px;font-weight: bold;">
+            Action
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text style="font-size: 19px;">Aqsa ka Baqsa</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">Food</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">12 april 2020</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 19px;">29 april 2020</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="repayDebt()" color="tertiary">
+              <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle autoHide="false">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>Debts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-tabs>
+    <ion-tab-bar style="--background:#424c58" slot="top">
+      <ion-tab-button tab="active-debts">
+        <ion-label style="font-size: 24px;">Active</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+
+      <ion-tab-button tab="closed-debts">
+        <!-- <ion-icon name="person-circle"></ion-icon> -->
+        <ion-label style="font-size: 24px;">Closed</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

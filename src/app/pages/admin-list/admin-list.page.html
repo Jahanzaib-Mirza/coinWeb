@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle autoHide="false">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>Admins</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-card>
+    <ion-card-content>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-toggle autoHide="false">
+            <ion-button (click)="openAddAdmin()">
+              <ion-icon name="add" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-grid>
+        <ion-row style="border-bottom: 1px solid grey;">
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Name</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Email</ion-text>
+          </ion-col>
+          <!-- <ion-col size="3" style="font-size: 24px;font-weight: bold;">
+            Address
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Contact</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 24px;font-weight: bold;">Action</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let user of users">
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{user.fullName}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{user.email}}</ion-text>
+          </ion-col>
+          <!-- <ion-col>
+            <ion-title>{{user.address}}</ion-title>
+          </ion-col> -->
+          <ion-col size="3">
+            <ion-text style="font-size: 20px;font-weight: 700px;">{{user.phoneNumber}}</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-button color="tertiary">
+              <ion-icon name="create" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button (click)="confirmation(user.id)" color="danger">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
